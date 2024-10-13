@@ -1,0 +1,16 @@
+
+services:
+
+  nginx:
+    build: ./nginx/
+    container_name: nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "5500:5500"
+    networks:
+      - inception
+
+networks:
+  inception:
+    driver: bridge
