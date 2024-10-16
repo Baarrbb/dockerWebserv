@@ -1,16 +1,37 @@
 
 services:
-
   nginx:
-    build: ./nginx/
+    build: ./nginx
     container_name: nginx
-    restart: always
     ports:
-      - "80:80"
-      - "5500:5500"
+      - "7700:7700"
+      - "8800:8800"
+    depends_on:
+      - php
+    volumes:
+      - files:/var/www/test
+      - blbl:/var/www/blbl
+      - data:/var/www/dataViz
+    networks:
+      - inception
+
+  php:
+    build: ./php-fpm
+    container_name: php
+    expose:
+      - "9000"
+    volumes:
+      - files:/var/www/test
+      - blbl:/var/www/blbl
+      - data:/var/www/dataViz
     networks:
       - inception
 
 networks:
   inception:
     driver: bridge
+
+volumes:
+  files:
+  blbl:
+  data:
