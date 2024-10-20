@@ -8,7 +8,7 @@
 <body>
     <h1>Uploader un fichier</h1>
     
-    <form action="/upload" method="POST" enctype="multipart/form-data">
+    <form action="/get_upload.php" method="POST" enctype="multipart/form-data">
         <label for="file">Choisissez un fichier :</label><br><br>
         <input type="file" id="file" name="file" accept="*/*"><br><br>
 
