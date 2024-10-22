@@ -4,6 +4,7 @@ services:
     build: ./nginx
     container_name: nginx
     ports:
+      - "80:80"
       - "7700:7700"
       - "8800:8800"
     depends_on:

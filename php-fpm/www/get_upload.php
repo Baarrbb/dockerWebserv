@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $fileName = $_FILES['file']['name'];
         $fileSize = $_FILES['file']['size'];
         $fileType = $_FILES['file']['type'];
-        
+
         // Dossier de destination pour l'upload
         $uploadFolder = './uploads/';
         
@@ -24,12 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo "Fichier uploadé avec succès : $fileName<br>";
             echo "Taille du fichier : $fileSize octets<br>";
             echo "Type de fichier : $fileType<br>";
-			header("Location: /uploads/" . urlencode($fileName));
+			header("Location: /uploads/");
     		exit();
         } else {
             echo "Erreur lors de l'upload du fichier.";
         }
     } else {
+		echo $_FILES['file'];
+		print_r($_FILES['file']);
         echo "Aucun fichier n'a été envoyé ou une erreur est survenue.";
     }
 }

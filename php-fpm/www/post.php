@@ -1,25 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test POST</title>
-</head>
-<body>
-    <h1>Tester les requêtes POST</h1>
-    
-    <form action="/post-endpoint" method="POST" enctype="application/x-www-form-urlencoded">
-        <label for="data">Données à envoyer :</label><br>
-        <textarea id="data" name="data" rows="4" cols="50"></textarea><br><br>
-        
-        <input type="submit" value="Envoyer POST">
-    </form>
-
-    <p>Cette page envoie une requête POST à <strong>/post-endpoint</strong>.</p>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +7,7 @@
 </head>
 <body>
     <h1>Tester les requêtes POST</h1>
-    
+
     <?php
     $message = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
