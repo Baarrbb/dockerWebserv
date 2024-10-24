@@ -11,6 +11,9 @@
     <?php
     $message = "";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		var_dump($_POST);
+		$input = file_get_contents('php://input');
+		echo "Données reçues via php://input : " . $input;
         $message = htmlspecialchars($_POST['data']); // Échapper les caractères spéciaux pour éviter XSS
     }
     ?>
