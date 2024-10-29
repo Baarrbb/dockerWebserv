@@ -13,6 +13,7 @@ services:
       - files:/var/www/test
       - blbl:/var/www/blbl
       - data:/var/www/dataViz
+      - /home/barb/dockerWebserv/nginx/conf/error.conf:/etc/nginx/nginx.conf
     networks:
       - inception
 
