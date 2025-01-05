@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $fileType = $_FILES['file']['type'];
 
         // Dossier de destination pour l'upload
-        $uploadFolder = './uploads/';
+        $uploadFolder = '/var/www/';
         
         // Créer le dossier s'il n'existe pas
         if (!is_dir($uploadFolder)) {
