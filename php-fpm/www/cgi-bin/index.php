@@ -14,6 +14,11 @@
 			phpinfo(INFO_GENERAL);
 			phpinfo();
 			echo "BONJOUR\n";
+			phpinfo(INFO_GENERAL);
+			phpinfo(INFO_GENERAL);
+			phpinfo(INFO_GENERAL);
+			phpinfo(INFO_GENERAL);
+			echo "TESTTEST\n";
 		?>
 	</body>
 </html>

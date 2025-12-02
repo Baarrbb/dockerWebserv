@@ -4,7 +4,7 @@ services:
     build: ./nginx
     container_name: nginx
     ports:
-      # - "80:80"
+      - "80:80"
       - "7700:7700"
       - "8800:8800"
     depends_on:
@@ -13,7 +13,7 @@ services:
       - files:/var/www/test
       - blbl:/var/www/blbl
       - data:/var/www/dataViz
-      - ./nginx/conf/test.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf/test1.conf:/etc/nginx/nginx.conf
     networks:
       - inception
 

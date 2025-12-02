@@ -22,3 +22,5 @@ fclean :
 	@ docker volume ls -q | xargs docker volume rm 2> /dev/null || true
 	@ docker network ls -q | xargs docker network rm 2> /dev/null || true
 
+down:
+	docker compose down
