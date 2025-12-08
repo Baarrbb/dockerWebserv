@@ -24,3 +24,6 @@ fclean :
 
 down:
 	docker compose down
+
+re: down
+	docker compose up -d
