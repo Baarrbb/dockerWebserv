@@ -6,6 +6,7 @@ services:
     ports:
       - "80:80"
       - "7700:7700"
+      # - "7070:7070"
       # - "7000:7000"
       # - "8800:8800"
       # - "7000:7000"
@@ -106,7 +107,7 @@ services:
       - files:/var/www/test
       - blbl:/var/www/blbl
       - data:/var/www/dataViz
-      - ./nginx/conf/test1.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf/final_test.conf:/etc/nginx/nginx.conf
     networks:
       - inception
 
