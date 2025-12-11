@@ -107,7 +107,7 @@ services:
       - files:/var/www/test
       - blbl:/var/www/blbl
       - data:/var/www/dataViz
-      - ./nginx/conf/final_test.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf/test1.conf:/etc/nginx/nginx.conf
     networks:
       - inception
 
